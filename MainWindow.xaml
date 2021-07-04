@@ -1,0 +1,118 @@
+﻿<Window x:Class="PomiaryRzeszow.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PomiaryRzeszow"
+        mc:Ignorable="d"
+        Title="Pogodynka" Height="450" Width="800"
+        ResizeMode="NoResize"
+        >
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <TabControl>
+            <TabItem Header="Pomiar jakości powietrza" Height="22" Margin="0,-2,-2,0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="147">
+                <Grid>
+                    <Grid.Background>
+                        <ImageBrush ImageSource="C:\Users\Knowyoukobff\source\repos\PomiaryRzeszow\rzeszow.jpg"></ImageBrush>
+                    </Grid.Background>
+                    <TextBox IsReadOnly="True" Name="SulfurDiox" FontWeight="Bold" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Margin="64,92,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="120"/>
+                    <TextBox IsReadOnly="True" x:Name="NitrogenDiox" FontWeight="Bold" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Margin="248,92,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="120"/>
+                    <TextBox IsReadOnly="True" x:Name="Carbon" FontWeight="Bold" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Margin="432,92,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="120"/>
+                    <TextBox IsReadOnly="True" x:Name="pm10" FontWeight="Bold" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Margin="616,92,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="120"/>
+                    <Label x:Name="AirTitle" FontWeight="Bold" FontSize="15" HorizontalContentAlignment="Center" Content="JAKOŚĆ POWIATRZA DLA MIASTA RZESZÓW | STAN NA DZIEŃ " Margin="0,10,0,0" VerticalAlignment="Top" Width="794" Height="50"/>
+                    <Label Content="Tlenek węgla" FontWeight="Bold" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Margin="248,92,0,0" VerticalAlignment="Top" Width="120"/>
+                    <Label Content="Ozon" FontWeight="Bold" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Margin="432,92,0,0" VerticalAlignment="Top" Width="120"/>
+                    <Label Content="pm10" FontWeight="Bold" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Margin="616,92,0,0" VerticalAlignment="Top" Width="120"/>
+                    <Label Content="Dwutlenek siarki" FontWeight="Bold" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Margin="64,92,0,0" VerticalAlignment="Top" Width="120" />
+                </Grid>
+            </TabItem>
+            <TabItem Header="Pomiar poziomu wody">
+                <Grid>
+                    <Grid.Background>
+                        <ImageBrush ImageSource="C:\Users\Knowyoukobff\source\repos\PomiaryRzeszow\wislok.jpg"></ImageBrush>
+                    </Grid.Background>
+                    <Label x:Name="WaterTitle" FontWeight="Bold" FontSize="15" HorizontalContentAlignment="Center" Content="STAN WODY W WISŁOKU W MIEŚCIE RZESZÓW | STAN NA DZIEŃ " Margin="0,10,0,0" VerticalAlignment="Top" Width="794" Height="50"/>
+                    <TextBox x:Name="water" IsReadOnly="True" FontWeight="Bold" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" HorizontalAlignment="Center" Margin="0,141,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="390" Height="80"/>
+                </Grid>
+            </TabItem>
+            <TabItem Name="Logowanie" Header="Zaloguj się">
+                <Grid>
+                    <Grid.Background>
+                        <ImageBrush ImageSource="C:\Users\Knowyoukobff\source\repos\PomiaryRzeszow\rzeszow.jpg"></ImageBrush>
+                    </Grid.Background>
+                    <Border Name="logBorder" BorderThickness="1" BorderBrush="Black" HorizontalAlignment="Center" Height="357" Margin="0,10,0,0" VerticalAlignment="Top" Width="235" Background="AliceBlue">
+                        <Label Name="welcomePrompt" Content="Witaj " HorizontalAlignment="Center" FontWeight="Bold" Visibility="Hidden"/>
+                    </Border>
+                    <Label Name="logLabel" Content="Login:" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+                    <TextBox Name="Login" HorizontalAlignment="Center" Margin="0,30,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                    <Label Name="passLabel" HorizontalAlignment="Center" Margin="0,50,0,0" VerticalAlignment="Top" FontWeight="Bold">
+                    </Label>
+                    <PasswordBox Name="Password" HorizontalAlignment="Center" Margin="0,70,0,0" VerticalAlignment="Top" Width="120"/>
+                    <Label Name="infoLab" Content="Nie masz konta? Zarejestruj się!" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,150,0,0" FontWeight="Bold"/>
+                    <Label Name="signLoginLab" Content="Login:" HorizontalAlignment="Center" Margin="0,180,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+                    <TextBox Name="signLogin" HorizontalAlignment="Center" Margin="0,200,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                    <Label Name="signPasswordLab" Content="Password:" HorizontalAlignment="Center" Margin="0,220,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+                    <TextBox Name="signPassword" HorizontalAlignment="Center" Margin="0,240,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                    <Label Name="signEmailLab" Content="E-Mail" HorizontalAlignment="Center" Margin="0,260,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.528,-0.243" FontWeight="Bold"/>
+                    <TextBox Name="signEmail" HorizontalAlignment="Center" Margin="0,280,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                    <Button Name="logBtn" Content="Zaloguj się" HorizontalAlignment="Center" Margin="0,100,0,0" VerticalAlignment="Top" Click="Button_Click"/>
+                    <Button Name="signBtn" Content="Zarejestruj się" HorizontalAlignment="Center" Margin="0,323,0,0" VerticalAlignment="Top"/>
+                </Grid>
+            </TabItem>
+            <TabItem Name="history" Header="Historia" Visibility="Hidden">
+                <Grid>
+                    <Grid.Background>
+                        <ImageBrush ImageSource="C:\Users\Knowyoukobff\source\repos\PomiaryRzeszow\rzeszow.jpg"></ImageBrush>
+                    </Grid.Background>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="58*"/>
+                        <ColumnDefinition Width="101*"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBox TextWrapping="NoWrap" Name="date" HorizontalAlignment="Left" Margin="10,0,0,0" Text=""  VerticalAlignment="Center" Width="105" Height="346" FontWeight="Bold"/>
+                    <TextBox TextWrapping="NoWrap" Name="historySo2" HorizontalAlignment="Left" Margin="115,0,0,0" Text=""  VerticalAlignment="Center" Width="105" Height="346" FontWeight="Bold"/>
+                    <TextBox TextWrapping="NoWrap" Name="historyCo" HorizontalAlignment="Left" Margin="220,0,0,0" Text=""  VerticalAlignment="Center" Width="105" Height="346" Grid.ColumnSpan="2" FontWeight="Bold"/>
+                    <TextBox TextWrapping="NoWrap" Name="historyOz" HorizontalAlignment="Left" Margin="35,0,0,0" Text=""  VerticalAlignment="Center" Width="106" Height="346" Grid.Column="1" FontWeight="Bold"/>
+                    <TextBox TextWrapping="NoWrap" Name="histrypm10" HorizontalAlignment="Left" Margin="141,0,0,0" Text=""  VerticalAlignment="Center" Width="105" Height="346" Grid.Column="1" FontWeight="Bold"/>
+                    <Label Content="Data" HorizontalAlignment="Left" Margin="45,-2,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.925,-0.34" FontWeight="Bold"/>
+                    <Label Content="Dwutlenek siarki" HorizontalAlignment="Left" Margin="119,-2,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.925,-0.34" FontWeight="Bold"/>
+                    <Label Content="Telenek węgla" HorizontalAlignment="Left" Margin="231,-2,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.925,-0.34" Grid.ColumnSpan="2" FontWeight="Bold"/>
+                    <Label Content="Ozon" HorizontalAlignment="Left" Margin="68,-2,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.925,-0.34" Grid.Column="1" FontWeight="Bold" />
+                    <Label Content="pm10" HorizontalAlignment="Left" Margin="173,-2,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.925,-0.34" Grid.Column="1" FontWeight="Bold"/>
+                    <Label Content="Chcesz być na bieżąco z alertami?" Grid.Column="1" HorizontalAlignment="Left" Margin="252,53,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+                    <CheckBox Content="Włącz powiadomienia mailowe" Grid.Column="1" HorizontalAlignment="Left" Margin="255,84,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+                </Grid>
+            </TabItem>
+            <TabItem Name="Database" Header="Baza Danych" Visibility="Hidden">
+                <Grid>
+                    <Grid.Background>
+                        <ImageBrush ImageSource="C:\Users\Knowyoukobff\source\repos\PomiaryRzeszow\rzeszow.jpg"></ImageBrush>
+                    </Grid.Background>
+                    <Border BorderThickness="1" BorderBrush="Black" HorizontalAlignment="Center" Height="357" Margin="0,10,0,0" VerticalAlignment="Top" Width="535" Background="AliceBlue">
+                        <TabControl>
+                            <TabItem Header="Users">
+                                <Grid Background="#FFE5E5E5">
+                                    <TextBox Name="user" HorizontalAlignment="Left" Margin="48,42,0,0" Text="USERNAME" TextWrapping="Wrap" VerticalAlignment="Top" Width="140" Height="185"/>
+                                    <TextBox Name="pass" HorizontalAlignment="Left" Margin="188,42,0,0" Text="PASSWORD" TextWrapping="Wrap" VerticalAlignment="Top" Width="140" Height="185"/>
+                                    <TextBox Name="email" HorizontalAlignment="Left" Margin="328,42,0,0" Text="EMAIL" TextWrapping="Wrap" VerticalAlignment="Top" Width="140" Height="185" RenderTransformOrigin="0.704,0.492"/>
+                                </Grid>
+
+                            </TabItem>
+                            <TabItem Header="AirData">
+                                <Grid Background="#FFE5E5E5"/>
+                            </TabItem>
+                            <TabItem Header="RiverData">
+                                <Grid Background="#FFE5E5E5"/>
+                            </TabItem>
+                        </TabControl>
+                    </Border>
+                    <Grid.ColumnDefinitions>
+
+                    </Grid.ColumnDefinitions>
+                </Grid>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>
