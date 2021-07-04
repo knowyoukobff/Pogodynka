@@ -48,18 +48,17 @@
                     </Border>
                     <Label Name="logLabel" Content="Login:" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
                     <TextBox Name="Login" HorizontalAlignment="Center" Margin="0,30,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-                    <Label Name="passLabel" HorizontalAlignment="Center" Margin="0,50,0,0" VerticalAlignment="Top" FontWeight="Bold">
-                    </Label>
                     <PasswordBox Name="Password" HorizontalAlignment="Center" Margin="0,70,0,0" VerticalAlignment="Top" Width="120"/>
                     <Label Name="infoLab" Content="Nie masz konta? Zarejestruj się!" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,150,0,0" FontWeight="Bold"/>
-                    <Label Name="signLoginLab" Content="Login:" HorizontalAlignment="Center" Margin="0,180,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+                    <Label Name="signLoginLab" Content="Login:" HorizontalAlignment="Center" Margin="0,176,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
                     <TextBox Name="signLogin" HorizontalAlignment="Center" Margin="0,200,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-                    <Label Name="signPasswordLab" Content="Password:" HorizontalAlignment="Center" Margin="0,220,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+                    <Label Name="signPasswordLab" Content="Hasło:" HorizontalAlignment="Center" Margin="0,218,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
                     <TextBox Name="signPassword" HorizontalAlignment="Center" Margin="0,240,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-                    <Label Name="signEmailLab" Content="E-Mail" HorizontalAlignment="Center" Margin="0,260,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.528,-0.243" FontWeight="Bold"/>
+                    <Label Name="signEmailLab" Content="E-Mail" HorizontalAlignment="Center" Margin="0,258,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.528,-0.243" FontWeight="Bold"/>
                     <TextBox Name="signEmail" HorizontalAlignment="Center" Margin="0,280,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
                     <Button Name="logBtn" Content="Zaloguj się" HorizontalAlignment="Center" Margin="0,100,0,0" VerticalAlignment="Top" Click="Button_Click"/>
                     <Button Name="signBtn" Content="Zarejestruj się" HorizontalAlignment="Center" Margin="0,323,0,0" VerticalAlignment="Top"/>
+                    <Label Name="passLabel" Content="Hasło:" HorizontalAlignment="Left" Margin="368,48,0,0" VerticalAlignment="Top"  FontWeight="Bold"/>
                 </Grid>
             </TabItem>
             <TabItem Name="history" Header="Historia" Visibility="Hidden">
